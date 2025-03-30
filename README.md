@@ -27,4 +27,64 @@ et permet aux utilisateurs de communiquer via des canaux.
 git clone https://github.com/Dadou1910/ft_irc.git
 cd ft_irc
 make
+```
+
+🛠️ Utilisation
+
+Lancer le serveur IRC :
+./ircserv <port> <password>
+
+    <port> : Port d'écoute du serveur (ex : 6667)
+
+    <password> : Mot de passe que les clients doivent fournir à la connexion via la commande PASS
+
+Exemple :
+./ircserv 6667 secretpass
+
+Pour se connecter, vous pouvez utiliser un client IRC comme irssi, HexChat, ou netcat pour tester manuellement.
+📚 Commandes IRC implémentées
+
+    PASS
+
+    NICK
+
+    USER
+
+    JOIN
+
+    PART
+
+    PRIVMSG
+
+    TOPIC
+
+    INVITE
+
+    KICK
+
+    MODE (i, t, k, o, l)
+
+    QUIT
+
+📁 Structure du projet
+ft_irc/
+├── includes/       # Fichiers d'en-tête (.hpp)
+├── srcs/           # Code source (.cpp)
+├── Makefile
+└── README.md
+🧪 Tests
+
+Utilisez des clients IRC comme HexChat, irssi, WeeChat, ou des scripts personnalisés
+pour tester la conformité du serveur et simuler des échanges entre utilisateurs.
+🤝 Auteurs
+
+Projet réalisé par :
+
+    👤 @Dadou1910
+
+📄 Licence
+
+Projet réalisé dans le cadre du cursus 42, à but pédagogique.
+Toute réutilisation du code est soumise aux règles de l'école.
+
 
