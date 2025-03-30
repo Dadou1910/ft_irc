@@ -83,6 +83,7 @@ pour tester la conformité du serveur et simuler des échanges entre utilisateur
 Projet réalisé par :
 
     👤 @Dadou1910
+    👤 @ByuyC
 
 📄 Licence
 
