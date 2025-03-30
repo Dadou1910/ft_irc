@@ -29,7 +29,9 @@ cd ft_irc
 make
 ```
 
-🛠️ Utilisation
+---
+
+##🛠️ Utilisation
 
 Lancer le serveur IRC :
 ./ircserv <port> <password>
@@ -66,7 +68,9 @@ Pour se connecter, vous pouvez utiliser un client IRC comme irssi, HexChat, ou n
 
     QUIT
 
-📁 Structure du projet
+---
+
+##📁 Structure du projet
 ``` bash
 ft_irc/
 ├── cmds/      # Commandes disponibles
@@ -74,11 +78,15 @@ ft_irc/
 ├── Makefile
 └── README.md
 ```
-🧪 Tests
+---
 
-Utilisez des clients IRC comme HexChat, irssi, WeeChat, ou des scripts personnalisés
-pour tester la conformité du serveur et simuler des échanges entre utilisateurs.
-🤝 Auteurs
+##🧪 Tests
+
+Utilisez des clients IRC comme Irssi ou netcat pour tester la conformité du serveur
+et simuler des échanges entre utilisateurs.
+---
+
+##🤝 Auteurs
 
 Projet réalisé par :
 
