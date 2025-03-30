@@ -67,11 +67,13 @@ Pour se connecter, vous pouvez utiliser un client IRC comme irssi, HexChat, ou n
     QUIT
 
 📁 Structure du projet
+``` bash
 ft_irc/
-├── includes/       # Fichiers d'en-tête (.hpp)
-├── srcs/           # Code source (.cpp)
+├── cmds/      # Commandes disponibles
+├── .cpp/.hpp
 ├── Makefile
 └── README.md
+```
 🧪 Tests
 
 Utilisez des clients IRC comme HexChat, irssi, WeeChat, ou des scripts personnalisés
