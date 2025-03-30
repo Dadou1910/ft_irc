@@ -31,7 +31,7 @@ make
 
 ---
 
-##🛠️ Utilisation
+## 🛠️ Utilisation
 
 Lancer le serveur IRC :
 ./ircserv <port> <password>
@@ -70,7 +70,7 @@ Pour se connecter, vous pouvez utiliser un client IRC comme irssi, HexChat, ou n
 
 ---
 
-##📁 Structure du projet
+## 📁 Structure du projet
 ``` bash
 ft_irc/
 ├── cmds/      # Commandes disponibles
@@ -80,13 +80,13 @@ ft_irc/
 ```
 ---
 
-##🧪 Tests
+## 🧪 Tests
 
 Utilisez des clients IRC comme Irssi ou netcat pour tester la conformité du serveur
 et simuler des échanges entre utilisateurs.
 ---
 
-##🤝 Auteurs
+## 🤝 Auteurs
 
 Projet réalisé par :
 
