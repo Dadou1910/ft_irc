@@ -82,7 +82,7 @@ ft_irc/
 
 🧪 Tests
 
-Utilisez des clients IRC comme Irssi ou netcat pour tester la conformité du serveur
+Utilisez Irssi ou netcat pour tester la conformité du serveur
 et simuler des échanges entre utilisateurs.
 ---
 
