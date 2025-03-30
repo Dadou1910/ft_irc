@@ -1,36 +1,38 @@
-CXX      := c++
-CXXFLAGS := -Wall -Wextra -Werror -std=c++98
+# Compiler and flags
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC_DIR  := srcs
-OBJ_DIR  := obj
-INC_DIR  := includes
+# Source and object files
+SOURCES = $(wildcard *.cpp) $(wildcard cmds/*.cpp)
+OBJECTS = $(SOURCES:.cpp=.o)
 
-TARGET   := ircserv
+# Executable name
+NAME = ircserv
 
-SRC_FILES := Server.cpp User.cpp Channel.cpp main.cpp
-SRC       := $(addprefix $(SRC_DIR)/, $(SRC_FILES))
+# Default target
+all: $(NAME)
 
-OBJ       := $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SRC))
+# Link object files into executable
+$(NAME): $(OBJECTS)
+	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
 
-INCLUDES  := -I$(INC_DIR)
+# Pattern rule for compiling .cpp files to .o files
+%.o: %.cpp Server.hpp irc.hpp Client.hpp
+	$(CC) $(CFLAGS) -c $< -o $@
 
-all: $(TARGET)
+# Run the executable after building
+ex: all
+	./$(NAME) 6667 o
 
-$(TARGET): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(TARGET)
-
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
-
-$(OBJ_DIR):
-	mkdir -p $(OBJ_DIR)
-
+# Clean object files
 clean:
-	rm -rf $(OBJ_DIR)
+	rm -f $(OBJECTS)
 
+# Clean everything (including executable)
 fclean: clean
-	rm -f $(TARGET)
+	rm -f $(NAME)
 
+# Rebuild everything
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all ex clean fclean re
